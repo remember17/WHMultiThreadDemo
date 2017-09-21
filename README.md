@@ -38,8 +38,6 @@ Demo的运行gif图如下：
 
 > 我们运用多线程的目的是：将耗时的操作放在后台执行！
 
-![多线程](http://upload-images.jianshu.io/upload_images/3873004-d3cd2ad81b66685d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 # 二、线程的状态与生命周期
 线程的生命周期是：新建 - 就绪 - 运行 - 阻塞 - 死亡
 
