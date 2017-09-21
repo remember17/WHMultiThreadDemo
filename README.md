@@ -19,11 +19,6 @@ Demo的运行gif图如下：
 > 6. GCD的理解与使用
 > 7. NSOperation的理解与使用
 
-Demo  在这里：**[WHMultiThreadDemo](https://github.com/remember17/WHMultiThreadDemo)**
-Demo的运行gif图如下：
-
-![example5.gif](http://upload-images.jianshu.io/upload_images/3873004-91f6923a8fc230d3.gif?imageMogr2/auto-orient/strip)
-
 # 一、多线程的基本概念
 > 进程：可以理解成一个运行中的应用程序，是系统进行资源分配和调度的基本单位，是操作系统结构的基础，主要管理资源。
 
