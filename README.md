@@ -19,6 +19,11 @@ Demo的运行gif图如下：
 > 6. GCD的理解与使用
 > 7. NSOperation的理解与使用
 
+Demo  在这里：**[WHMultiThreadDemo](https://github.com/remember17/WHMultiThreadDemo)**
+Demo的运行gif图如下：
+
+![example5.gif](http://upload-images.jianshu.io/upload_images/3873004-91f6923a8fc230d3.gif?imageMogr2/auto-orient/strip)
+
 # 一、多线程的基本概念
 > 进程：可以理解成一个运行中的应用程序，是系统进行资源分配和调度的基本单位，是操作系统结构的基础，主要管理资源。
 
@@ -26,17 +31,17 @@ Demo的运行gif图如下：
 
 > 主线程：处理UI，所有更新UI的操作都必须在主线程上执行。不要把耗时操作放在主线程，会卡界面。
 
-> 多线程：在同一时刻，CPU只能处理1条线程，但CPU可以在多条线程之间快速的切换，只要切换的足够快，就造成了多线程一同执行的假象。
+> 多线程：在同一时刻，一个CPU只能处理1条线程，但CPU可以在多条线程之间快速的切换，只要切换的足够快，就造成了多线程一同执行的假象。
 
 线程就像火车的一节车厢，进程则是火车。车厢（线程）离开火车（进程）是无法跑动的，而火车（进程）至少有一节车厢（主线程）。多线程可以看做多个车厢，它的出现是为了提高效率。
 多线程是通过提高资源使用率来提高系统总体的效率。
 
 > 我们运用多线程的目的是：将耗时的操作放在后台执行！
 
-# 二、线程的状态与生命周期
-下图是线程状态示意图，从图中可以看出线程的生命周期是：新建 - 就绪 - 运行 - 阻塞 - 死亡
+![多线程](http://upload-images.jianshu.io/upload_images/3873004-d3cd2ad81b66685d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![](http://upload-images.jianshu.io/upload_images/3873004-a64a254331bb442a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+# 二、线程的状态与生命周期
+线程的生命周期是：新建 - 就绪 - 运行 - 阻塞 - 死亡
 
 下面分别阐述线程生命周期中的每一步
 > 新建：实例化线程对象
@@ -55,8 +60,10 @@ Demo的运行gif图如下：
 
 # 三、多线程的四种解决方案
 多线程的四种解决方案分别是：pthread，NSThread，GCD， NSOperation。
-下图是对这四种方案进行了解读和对比。
-![](http://upload-images.jianshu.io/upload_images/3873004-d66485790959dcf5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+>pthread：运用C语言，是一套通用的API，可跨平台Unix/Linux/Windows。线程的生命周期由程序员管理。
+>NSThread：面向对象，可直接操作线程对象。线程的生命周期由程序员管理。
+>GCD：代替NSThread，可以充分利用设备的多核，自动管理线程生命周期。
+>NSOperation：底层是GCD，比GCD多了一些方法，更加面向对象，自动管理线程生命周期。
 
 # 四、线程安全问题
 当多个线程访问同一块资源时，很容易引发数据错乱和数据安全问题。就好比几个人在同一时修改同一个表格，造成数据的错乱。
