@@ -16,7 +16,7 @@
 @end
 
 @implementation GCDViewController
-
+///提问，GCD是以队列的数据结构结构吗？ 串行的同步和异步没有区别？
 /** 串行同步 */
 - (IBAction)syncSerialAction:(id)sender {
     [self syncSerial];
@@ -102,7 +102,7 @@
     });
 }
 
-/** 串行异步 */
+/** 串行异步 我的修改 */
 - (void)asyncSerial {
     
     NSLog(@"\n\n**************串行异步***************\n\n");
